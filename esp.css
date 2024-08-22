@@ -1,0 +1,449 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+#app {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+.exercise-container {
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.exercise-header {
+    background-color: #f8f9fa;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.exercise-content {
+    padding: 20px;
+}
+
+.card {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.controls {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.exercise-header h2 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #2c3e50;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    color: #2c3e50;
+    cursor: pointer;
+}
+
+.exercise-content {
+    padding: 15px;
+    display: none;
+}
+
+.exercise-content.active {
+    display: block;
+}
+
+.card {
+    width: 250px;
+    height: 150px;
+    perspective: 1000px;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+#word-front,
+#word-back {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 1em;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#feedback,
+#writeFeedback {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#choices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+#choices button {
+    margin: 5px;
+}
+
+#matching-exercise {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#spanish-words,
+#russian-words {
+    width: 45%;
+}
+
+.word-card {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.word-card:hover {
+    background-color: #e0e0e0;
+}
+
+.word-card.selected {
+    background-color: #3498db;
+    color: white;
+}
+
+.word-card.correct {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.word-card.incorrect {
+    background-color: #e74c3c;
+    color: white;
+}
+
+#fill-in-blanks {
+    margin-top: 20px;
+}
+
+.sentence {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.options {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.options button {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    color: #333;
+    /* Изменено на темно-серый цвет для лучшей читаемости */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.options button:hover {
+    background-color: #e0e0e0;
+}
+
+.options button.selected {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #45a049;
+}
+
+#feedback {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#checkAnswersButton,
+#nextFillInBlankSetButton {
+    display: block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+#checkAnswersButton:hover,
+#nextFillInBlankSetButton:hover {
+    background-color: #2980b9;
+}
+
+#sentence-building {
+    margin-top: 20px;
+}
+
+#word-bank,
+#sentence-construction {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    min-height: 50px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.word-tile {
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+}
+
+#sentenceFeedback {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#checkSentenceButton,
+#nextSentenceButton {
+    display: block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+#checkSentenceButton:hover,
+#nextSentenceButton:hover {
+    background-color: #2980b9;
+}
+
+#progressIndicator {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#shuffleSentencesButton {
+    display: block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+#shuffleSentencesButton:hover {
+    background-color: #27ae60;
+}
+
+#correctSentence {
+    margin-top: 15px;
+    font-style: italic;
+}
+
+.translation {
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+#correctSentence {
+    margin-top: 15px;
+    font-style: italic;
+    color: #27ae60;
+}
+
+.word-tile {
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+    display: inline-block;
+}
+
+.word-tile:hover {
+    background-color: #e0e0e0;
+}
+
+#sentence-construction .word-tile {
+    background-color: #d4edda;
+}
+
+#sentence-construction .word-tile:hover {
+    background-color: #c3e6cb;
+}
+
+.translation {
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+#correctSentence {
+    margin-top: 15px;
+    font-style: italic;
+    color: #27ae60;
+}
