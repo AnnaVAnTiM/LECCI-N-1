@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LECCIÓN 1</title>
+    <link rel="stylesheet" href="esp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <div id="app">
+        <h1>LECCIÓN 1</h1>
+
+        <div class="exercise-container">
+            <div class="exercise-header">
+                <h2>Флеш-карточки</h2>
+                <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+            </div>
+            <div class="exercise-content">
+                <div id="flashcards">
+                    <div class="controls">
+                        <label>
+                            <input type="checkbox" id="directionToggle"> Перевод с русского на испанский
+                        </label>
+                    </div>
+                    <div id="flashcard" class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div id="word-front"></div>
+                            </div>
+                            <div class="card-back">
+                                <div id="word-back"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button id="shuffleButton">Перемешать</button>
+                        <button id="nextButton">Следующее слово</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="exercise-container">
+            <div class="exercise-header">
+                <h2>Выбор перевода</h2>
+                <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+            </div>
+            <div class="exercise-content">
+                <h3 id="question"></h3>
+                <div id="choices"></div>
+                <p id="feedback"></p>
+                <button id="nextQuestionButton" style="display: none;">Следующий вопрос</button>
+            </div>
+        </div>
+
+        <div class="exercise-container">
+            <div class="exercise-header">
+                <h2>Написание слова</h2>
+                <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+            </div>
+            <div class="exercise-content">
+                <h3 id="translation"></h3>
+                <input type="text" id="wordInput" placeholder="Введите слово на испанском">
+                <button id="checkButton">Проверить</button>
+                <p id="writeFeedback"></p>
+                <button id="nextWriteButton" style="display: none;">Следующее слово</button>
+            </div>
+        </div>
+        <div class="exercise-container">
+            <div class="exercise-header">
+                <h2>Сопоставление слов</h2>
+                <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+            </div>
+            <div class="exercise-content">
+                <div id="matching-exercise">
+                    <div id="spanish-words"></div>
+                    <div id="russian-words"></div>
+                </div>
+                <button id="checkMatchingButton">Проверить</button>
+                <p id="matchingFeedback"></p>
+                <button id="nextMatchingButton" style="display: none;">Следующий набор</button>
+            </div>
+        </div>
+        <div class="exercise-container">
+            <div class="exercise-header">
+                <h2>Заполни пропуски (Спряжение глаголов)</h2>
+                <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+            </div>
+            <div class="exercise-content">
+                <div id="fill-in-blanks">
+                    <div id="sentences"></div>
+                    <button id="checkAnswersButton">Проверить ответы</button>
+                    <p id="feedback"></p>
+                    <button id="nextFillInBlankSetButton">Следующий набор</button>
+                </div>
+            </div>
+            <div class="exercise-container">
+                <div class="exercise-header">
+                    <h2>Составление предложений</h2>
+                    <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+                </div>
+                <div class="exercise-content">
+                    <div id="sentence-building">
+                        <p>Составьте правильное предложение на испанском, кликая на предложенные слова:</p>
+                        <p id="russianSentence" class="translation"></p>
+                        <div id="word-bank"></div>
+                        <div id="sentence-construction"></div>
+                        <button id="checkSentenceButton">Проверить предложение</button>
+                        <button id="shuffleSentencesButton">Перемешать предложения</button>
+                        <p id="sentenceFeedback"></p>
+                        <p id="correctSentence" style="display: none;"></p>
+                        <button id="nextSentenceButton" style="display: none;">Следующее предложение</button>
+                        <p id="progressIndicator"></p>
+                    </div>
+                </div>
+            </div>
+
+            <script src="esp.js"></script>
+</body>
+
+</html>
